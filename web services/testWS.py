@@ -4,7 +4,7 @@ BASE_URL = 'http://localhost:2025/test'
 
 # Test Create (POST)
 def test_create():
-    payload = {'id': '4', 'name': 'John Doe', 'email': 'john.doe@example.com'}
+    payload = {'id': '6', 'name': 'John Doe', 'email': 'john.doe@example.com'}
     response = requests.post(BASE_URL, json=payload)
     print('CREATE:', response.status_code, response.json())
 
@@ -33,6 +33,6 @@ if __name__ == '__main__':
     test_create()
     test_get_all()
     test_get_one(1)  # Adjust the ID based on your data
-    ##test_update(1)   # Adjust the ID based on your data
-    ##test_delete(1)   # Adjust the ID based on your data
+    test_update(1)   # Adjust the ID based on your data
+    test_delete(1)   # Adjust the ID based on your data
     test_get_all()
